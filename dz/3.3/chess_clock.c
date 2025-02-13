@@ -54,14 +54,14 @@ void player_turn(int player) {
     }
 
     if (shm_data->player1_time > TIME_LIMIT) {
-        printf("Поражение белых\n");
+        printf("Техническое поражение белых\n");
         ReleaseMutex(hMutex);
         UnmapViewOfFile(shm_data);
         CloseHandle(hMapFile);
         return;
     }
     if (shm_data->player2_time > TIME_LIMIT) {
-        printf("Поражение черных\n");
+        printf("Техническое поражение черных\n");
         ReleaseMutex(hMutex);
         UnmapViewOfFile(shm_data);
         CloseHandle(hMapFile);
